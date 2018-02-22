@@ -208,7 +208,7 @@ app.post('*', jsonParser, function (req, res) {
           for(var i=0;i<docs.length;i++){
             if(Object.compare(req.body,JSON.parse(docs[i].restbody))){
               //res.setHeader('Content-Type', 'application/json')
-              res.set({'Content-Length':"0",'Content-Type':"application/json;charset=UTF-8","Date":"Wed, 24 Jan 2018 10:02:22 GMT","ETag":"\"0\"","Location":"http://localhost:3000/statuscheck","Vary":"Accept-Encoding,User-Agent"});
+              res.set({'Content-Length':"0",'Content-Type':"application/json;charset=UTF-8","Date":"Wed, 24 Jan 2018 10:02:22 GMT","ETag":"\"0\"","Location":"https://tranquil-depths-76353.herokuapp.com/statuscheck","Vary":"Accept-Encoding,User-Agent"});
               //res.writeHead(200,'{"Content-Length":"0","Content-Type":"application/json;charset=UTF-8","Date":"Wed, 24 Jan 2018 10:02:22 GMT","ETag":"\"0\"","Location":"https://D1CMPVRAAMVW1.stc.fehc/catalog-service/api/consumer/requests/66d6d522-5cf8-4384-8635-fbfbe535aeb8","Vary":"Accept-Encoding,User-Agent"}');
               //res.json(docs[i].response);
               res.send(docs[i].response);
