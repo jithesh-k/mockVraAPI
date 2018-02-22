@@ -1,0 +1,62 @@
+{
+    "@type": "CatalogItemRequest",
+    "catalogItemRef": {
+     "id": "91a722c3-ffb6-46b3-9e31-246c9562d73c"
+    },
+    "organization": {
+     "tenantRef": "STCENG345",
+     "subtenantRef": "49b580a0-bda8-4017-844a-566e18e1f39c"
+    },
+    "requestedFor": "ehc_sysadmin@stc.fehc",
+    "state": "SUBMITTED",
+    "requestNumber": 0,
+    "requestData": {
+     "entries": [{
+      "key": "description",
+      "value": {
+       "type": "string",
+       "value": "Testing"
+      }
+     },
+     {
+      "key": "reasons",
+      "value": {
+       "type": "string",
+       "value": "Testing"
+      }
+     },
+     {
+      "key": "requestedFor",
+      "value": {
+       "type": "string",
+       "value": "ehc_sysadmin@stc.fehc"
+      }
+     },
+     {
+      "key": "provider-arrayOfVMNames",
+      "value": {
+       "type": "multiple",
+       "elementTypeId": "STRING",
+       "items": [{
+        "type": "string",
+        "value": "ECINSDBSTW0436"
+       }]
+      }
+     },
+     {
+      "key": "provider-leaseTime",
+      "value": {
+       "type": "string",
+       "value": "25"
+      }
+     },
+     {
+      "key": "provider-__ASD_PRESENTATION_INSTANCE",
+      "value": {
+       "type": "string",
+       "value": "2aa28dca-cd8e-4034-aff6-6d6edafaab63"
+      }
+     }]
+    }
+    }
+    

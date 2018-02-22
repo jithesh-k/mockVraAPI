@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>MEAN Stack App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container" ng-controller="AppCntrl">
+            <h1>Mock API</h1>
+            <table class="table">
+                <thead>
+                    <th>Url</th>
+                    <th>Method</th>
+                    <th>Authorization</th>
+                    <th>Headers</th>
+                    <th>Body</th>
+                    <th>Response</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                  <tr>
+                        <td><input class ="form-control" ng-model="rest.url"></td>
+                        <td><input class ="form-control" ng-model="rest.method"></td>
+                        <td><input class ="form-control" ng-model="rest.authorization"></td>
+                        <td><input class ="form-control" ng-model="rest.headers"></td>
+                        <td><input class ="form-control" ng-model="rest.restbody"></td>
+                        <td><input class ="form-control" ng-model="rest.response"></td>
+                        <td><button class="btn btn-primary" ng-click="add()">Add</button></td>
+                        <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+                 </tr>
+
+
+
+                    <tr ng-repeat="rest in restList">
+                        <td>{{rest.url}}</td>
+                        <td>{{rest.method}}</td>
+                        <td>{{rest.authorization}}</td>
+                        <td>{{rest.headers}}</td>
+                        <td>{{rest.restbody}}</td>
+                        <td>{{rest.response}}</td>
+                        <td><button class="btn btn-danger" ng-click="remove(rest._id)">Remove</button></td>
+                        <td><button class="btn btn-warning" ng-click="edit(rest._id)">Edit</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="../controllers/controller.js"></script>
+  </body>
+</html>
